@@ -1,0 +1,62 @@
+<html>
+<head>    
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" 
+    style="background-image: url(bg.jpg);
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover; 
+          ">
+      <img src="mobil1.png" height="120" width="120" alt="">
+        <h1>Struk/Invoice</h1>
+        <center>
+        <table>
+          <tr>
+            <td><p><strong>Nama Depan</strong></p></td>
+            <td>: </td>
+            <td><span id="displayFname"></span></td>
+          </tr>
+          <tr>
+            <td><p><strong>Nama Belakang</strong></p></td>
+            <td>: </td>
+            <td><span id="displayLname"></span></td>
+          </tr>
+          <tr>
+            <td><p><strong>Email</strong></p></td>
+            <td>: </td>
+            <td><span id="displayEmail"></span></td>
+          </tr>
+          <tr>
+            <td><p><strong>Keterangan</strong></p></td>
+            <td>: </td>
+            <td><span id="displayKet"></span></td>
+          </tr>
+          <tr>
+            <td><p><strong>Harga</strong></p></td>
+            <td>: </td>
+            <td>Rp. 100.000.000</td>
+          </tr>
+        </table>
+        <h2>Terima kasih telah melakukan transaksi!</h2>
+        </center>
+        <a href="content.html">
+            <button type="button">BACK</button>
+        </a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fname = localStorage.getItem('fname');
+            const lname = localStorage.getItem('lname');
+            const email = localStorage.getItem('email');
+            const ket = localStorage.getItem('ket');
+
+            document.getElementById('displayFname').textContent = fname;
+            document.getElementById('displayLname').textContent = lname;
+            document.getElementById('displayEmail').textContent = email;
+            document.getElementById('displayKet').textContent = ket;
+        });
+    </script>
+</body>
+</html>
